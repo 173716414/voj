@@ -11,7 +11,7 @@
     </a-layout>
   </div>
 
-  <router-view />
+  <!--  <router-view />-->
 </template>
 
 <style scoped>

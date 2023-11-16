@@ -1,7 +1,12 @@
 <template>
   <div id="userLayout">
     <a-layout style="min-height: 100vh">
-      <a-layout-header class="header"> 用户布局</a-layout-header>
+      <a-layout-header class="header">
+        <a-space>
+          <img src="../assets/vojlogo.png" class="logo" />
+          <!--          <div>Voj</div>-->
+        </a-space>
+      </a-layout-header>
       <a-layout-content class="content">
         <router-view />
       </a-layout-content>
@@ -9,26 +14,24 @@
     </a-layout>
   </div>
 
-  <router-view />
+  <!--  <router-view />-->
 </template>
 
 <style scoped>
 #userLayout {
+  text-align: center;
 }
 
 #userLayout .header {
-  margin-bottom: 16px;
-  box-shadow: #eee 1px 1px 5px;
+  margin-top: 16px;
 }
 
 #userLayout .content {
-  background: linear-gradient(to right, #bbb, #fff);
   margin-bottom: 16px;
   padding: 20px;
 }
 
 #userLayout .footer {
-  background: #efefef;
   padding: 16px;
   position: sticky;
   bottom: 0;
