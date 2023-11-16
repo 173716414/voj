@@ -42,15 +42,17 @@ import ACCESS_ENUM from "@/access/accessEnum";
 
 const router = useRouter();
 const store = useStore();
-const loginUser = store.state.user.loginUser;
+// const loginUser = store.state.user.loginUser;
 
 const visibleRoutes = computed(() => {
   return routes.filter((item, index) => {
-    console.log(loginUser.userRole);
+    // console.log(store.state.user.loginUser.userRole);
     if (item.meta?.hideInMenu) {
       return false;
     }
-    if (!checkAccess(loginUser, item?.meta?.access as string)) {
+    if (
+      !checkAccess(store.state.user.loginUser, item?.meta?.access as string)
+    ) {
       return false;
     }
     return true;

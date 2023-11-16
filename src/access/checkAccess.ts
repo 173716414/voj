@@ -12,7 +12,7 @@ const checkAccess = (loginUser: any, needAccess = ACCESS_ENUM.NOT_LOGIN) => {
   }
   if (needAccess === ACCESS_ENUM.ADMIN) {
     if (loginUserAccess !== ACCESS_ENUM.ADMIN) {
-      console.log(1000);
+      // console.log(1000);
       return false;
     }
   }
